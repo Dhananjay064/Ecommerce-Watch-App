@@ -7,3 +7,4 @@ export const colors = {
     yellow: '#FFD33C',
     lavendar: '#F3ECFF',
   };
+  
