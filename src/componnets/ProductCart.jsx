@@ -3,13 +3,19 @@ import React from 'react'
 import { spacing ,fontSize} from '../utility/dimensons'
 import { fontFamily } from '../utility/fonts'
 import {colors} from '../utility/colors'
+import { useNavigation } from '@react-navigation/native'
 
 
 const imgurl='https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1725993983/Croma%20Assets/Communication/Wearable%20Devices/Images/309325_0_fwabll.png';
 
 const ProductCart = ({item}) => {
+    // hook navigation
+    const navigation=useNavigation()
+    const handleProductNavigationDetailScreen=()=>{
+        navigation.navigate('PRODUCT_DETAILS',{item})
+    }
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={handleProductNavigationDetailScreen}>
         <View style={styles.imageWrapper}>
         <Image 
            source={{uri:item.image}}

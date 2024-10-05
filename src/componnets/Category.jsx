@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import { fontSize, spacing ,iconSize} from '../utility/dimensons'
 import {colors} from '../utility/colors'
 import { fontFamily } from '../utility/fonts'
+
 const category = [
   {
     id: 1,
@@ -17,7 +18,7 @@ const category = [
   },
   {
     id: 2,
-    name: 'Headphones',
+    name: 'Headphone',
   },
   {
     id: 3,
@@ -37,12 +38,8 @@ const category = [
   },
 ];
 
-const Category = () => {
-    const [selectedCategory,setSelectCategory]=useState("Smart Watch")
-    
-    const HandleCategory=(category)=>{
-        setSelectCategory(category)
-    }
+const Category = ({selectCategory,HandleCategory}) => {
+ 
     return (
       <FlatList 
         data={category}
@@ -54,14 +51,14 @@ const Category = () => {
               style={[
                 
                 styles.categoryText,
-                selectedCategory === item.name && {
+                selectCategory === item.name && {
                   color: colors.purple,
                   alignItems:'center'
                 },
               ]}>
               {item.name}
             </Text>
-            {selectedCategory === item.name && <View style={styles.underline} />}
+            {selectCategory === item.name && <View style={styles.underline} />}
           </TouchableOpacity>
         )}
         keyExtractor={item => item.id}
