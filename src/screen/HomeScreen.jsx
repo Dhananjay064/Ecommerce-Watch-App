@@ -22,7 +22,6 @@ const HomeScreen = () => {
   const [selectCategory, setSelectCategory] = useState('Smart Watch');
  
   const HandleCategory = newcategory => {
-    console.log(newcategory)
     if (newcategory == 'Smart Watch') {
       setdata(smartwatch);
     } else if (newcategory == 'Headphone') {
