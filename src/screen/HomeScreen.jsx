@@ -13,7 +13,7 @@ import {colors} from '../utility/colors';
 import {fontFamily} from '../utility/fonts';
 import Category from '../componnets/Category';
 import ProductCart from '../componnets/ProductCart';
-import {smartwatch} from '../data/smartwatch';
+import {smartwatch} from '../data/smartwatch'
 import {headphone} from '../data/headphone';
 
 const HomeScreen = () => {
